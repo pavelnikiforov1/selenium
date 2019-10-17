@@ -18,7 +18,7 @@ class GoogleSearch(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 
-    def test_git(self):
+    def test01_login(self):
         driver = self.driver
 
         driver.get("https://github.com/login")
@@ -28,19 +28,30 @@ class GoogleSearch(unittest.TestCase):
         login_page.enter_password("pavelniki787")
         login_page.click()
 
+    def test02_home_page(self):
+        driver = self.driver
         home_page = HomePage(driver)
         home_page.click_on_dropdown()
         home_page.click_on_repos()
 
+    def test03_repos_page(self):
+        driver = self.driver
+
         repos_page = RepoSPage(driver)
         repos_page.go_to_repo()
 
+    def test04_repo_page(self):
+        driver = self.driver
         repo_page = RepoPage(driver)
         repo_page.issue()
 
+    def test05_issue_page(self):
+        driver = self.driver
         issue_page = IssuePage(driver)
         issue_page.new_issue()
 
+    def test06_new_issue_page(self):
+        driver = self.driver
         new_issue_page = NewIssuePage(driver)
         new_issue_page.write_title("my 6th selenium issue title")
         new_issue_page.write_body("my 6th selenium issue body ")
