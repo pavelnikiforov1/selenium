@@ -2,12 +2,12 @@ from selenium import webdriver
 
 import unittest
 
-from POMDemo.Pages.HomePage import HomePage
-from POMDemo.Pages.LoginPage import MainPage as LoginPage
-from POMDemo.Pages.ReposPage import RepoSPage
-from POMDemo.Pages.RepoPage import RepoPage
-from POMDemo.Pages.IssuePage import IssuePage
-from POMDemo.Pages.NewIssuePage import NewIssuePage
+from featuers.POMDemo.Pages.HomePage import HomePage
+from featuers.POMDemo.Pages.LoginPage import MainPage as LoginPage
+from featuers.POMDemo.Pages.ReposPage import RepoSPage
+from featuers.POMDemo.Pages.RepoPage import RepoPage
+from featuers.POMDemo.Pages.IssuePage import IssuePage
+from featuers.POMDemo.Pages.NewIssuePage import NewIssuePage
 
 
 class GoogleSearch(unittest.TestCase):
